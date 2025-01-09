@@ -1,6 +1,6 @@
 export default function Home() {
     return (
-        <section>
+        <section className="container">
             <div>
                 <h1>ELENCO DEI FILM</h1>
             </div>

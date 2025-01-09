@@ -2,7 +2,14 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
+body {
+  background-color: rgb(224, 178, 193);
+}
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }

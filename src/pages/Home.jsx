@@ -27,7 +27,7 @@ export default function Home() {
     return (
         <section className="container">
             <div>
-                <h1 className='text-center text-success p-4'>ELENCO DEI FILM</h1>
+                <h1 className='text-center p-4'>ELENCO DEI FILM</h1>
                 <section className="row">
                     {
                         movies.map(movie => {

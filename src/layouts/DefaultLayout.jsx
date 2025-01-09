@@ -5,9 +5,9 @@ import Footer from '../layouts/Footer.jsx';
 export default function DefaultLayout() {
     return (
         <>
-            <Header></Header>
+            <Header />
             <Outlet />
-            <Footer></Footer>
+            <Footer />
         </>
     )
 }

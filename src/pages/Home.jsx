@@ -27,17 +27,17 @@ export default function Home() {
     return (
         <section className="container">
             <div>
-                <h1>ELENCO DEI FILM</h1>
-                <section>
-                    <ul>
-                        {
-                            movies.map(movie => {
-                                return <li key={movie.id}>
+                <h1 className='text-center text-success p-4'>ELENCO DEI FILM</h1>
+                <section className="row">
+                    {
+                        movies.map(movie => {
+                            return (
+                                <div key={movie.id} className=" col-sm-8 col-md-6 col-lg-4 mb-4">
                                     <MovieCard movie={movie}></MovieCard>
-                                </li>
-                            })
-                        }
-                    </ul>
+                                </div>
+                            )
+                        })
+                    }
                 </section>
             </div>
         </section>

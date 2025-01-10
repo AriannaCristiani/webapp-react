@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import StarsVote from '../../components/StarsVote';
 
 
 
@@ -34,7 +35,7 @@ export default function Movies() {
                             <div className="col-auto">
                                 <img src={movie.image} alt={movie.title} className="img-fluid" style={{ maxWidth: '200px', borderRadius: '8px' }} />
                             </div>
-                            <div className="col fs-4">
+                            <div className="col">
                                 <h1 className="card-title">{movie.title}</h1>
                                 <div>
                                     <strong>Regista: </strong>{movie.director}
@@ -42,6 +43,7 @@ export default function Movies() {
                                 <p>
                                     <strong>Genere: </strong>{movie.genre}
                                 </p>
+                                <strong>Voto: </strong> <StarsVote vote={movie.avg_vote} />
                                 <p className="card-text">{movie.abstract}</p>
                             </div>
                         </div>

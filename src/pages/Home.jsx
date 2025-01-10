@@ -8,8 +8,7 @@ export default function Home() {
 
     function fetchMovies() {
 
-        axios.get('http://localhost:3000/api/movies', {
-        })
+        axios.get('http://localhost:3000/api/movies')
             .then(response => {
                 // console.log(response)
                 setMovies(response.data)

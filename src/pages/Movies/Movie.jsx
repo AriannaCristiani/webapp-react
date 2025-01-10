@@ -1,19 +1,56 @@
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+
+
+
 export default function Movies() {
 
+    const [movie, setMovie] = useState(null)
+
+    const { id } = useParams()
+
+    function fetchMovie() {
+        axios.get(`http://localhost:3000/api/movies/${id}`)
+            .then(response => {
+                setMovie(response.data)
+            })
+            .catch(err => {
+                console.error(err)
+            })
+    }
+
+    useEffect(() => {
+        fetchMovie()
+    }, [id])
+
     return (
-        <>
-            <section>
-                <div className="container">
-                    <h1>Titolo del film</h1>
-                    <div>
-                        nome regista
+
+        movie ? <>
+            <section className="container mt-4">
+                <div className="card" style={{ borderRadius: '10px', backgroundColor: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
+                    <div className="card-body">
+                        <div className="row align-items-center">
+                            <div className="col-auto">
+                                <img src={movie.image} alt={movie.title} className="img-fluid" style={{ maxWidth: '200px', borderRadius: '8px' }} />
+                            </div>
+                            <div className="col fs-4">
+                                <h1 className="card-title">{movie.title}</h1>
+                                <div>
+                                    <strong>Regista: </strong>{movie.director}
+                                </div>
+                                <p>
+                                    <strong>Genere: </strong>{movie.genre}
+                                </p>
+                                <p className="card-text">{movie.abstract}</p>
+                            </div>
+                        </div>
                     </div>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse incidunt cum, minus suscipit saepe unde!
-                    </p>
                 </div>
             </section>
-        </>
+        </> :
+            <div>Loading...</div>
+
     )
 }
 

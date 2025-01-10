@@ -28,3 +28,9 @@ nav .active {
 .custom-card:hover {
   opacity: 80%;
 }
+
+.form-container {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgba(192, 80, 80, 0.637);
+  border-radius: 10px;
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import StarsVote from '../../components/StarsVote';
+import ReviewCard from '../../components/ReviewCard';
 
 
 
@@ -29,11 +30,11 @@ export default function Movies() {
 
         movie ? <>
             <section className="container mt-4">
-                <div className="card" style={{ borderRadius: '10px', backgroundColor: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
+                <div className="custom-card" style={{ borderRadius: '10px', backgroundColor: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
                     <div className="card-body">
                         <div className="row align-items-center">
                             <div className="col-auto">
-                                <img src={movie.image} alt={movie.title} className="img-fluid" style={{ maxWidth: '200px', borderRadius: '8px' }} />
+                                <img src={movie.image} alt={movie.title} className="img-fluid" style={{ maxWidth: '200px', borderRadius: ' 8px 0 0 8px ' }} />
                             </div>
                             <div className="col">
                                 <h1 className="card-title">{movie.title}</h1>
@@ -48,6 +49,22 @@ export default function Movies() {
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+            <section className='container'>
+                <div>
+                    <div>
+                        <h2 className='text-center fs-1 py-4'>Tutte le recensioni</h2>
+                    </div>
+
+                    {movie.reviews.length ?
+                        <div>
+                            {movie.reviews.map(review => (
+                                <ReviewCard review={review} key={review.id} />
+                            ))}
+                        </div> :
+                        <div>Attualmente non ci sono recensioni</div>
+                    }
                 </div>
             </section>
         </> :

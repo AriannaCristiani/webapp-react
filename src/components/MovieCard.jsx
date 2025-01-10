@@ -7,7 +7,7 @@ export default function movieCard({ movie }) {
 
   return (
     <section className='container'>
-      <div className='card' style={{ width: '18rem' }} >
+      <div className='card custom-card' style={{ width: '18rem' }} >
         <img src={image} className='card-img-top' alt="" />
         <div className='card-body'>
           <h5 className='card-title fs-4'><strong>{title}</strong></h5>

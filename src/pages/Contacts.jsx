@@ -1,6 +1,6 @@
-export default function Contact() {
+export default function Contacts() {
     return (
-        <section className="container">
+        <section className="container py-4">
             <div>
                 <h1>Contatti</h1>
             </div>

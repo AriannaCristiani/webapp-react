@@ -37,15 +37,16 @@ export default function Movies() {
                                 <img src={movie.image} alt={movie.title} className="img-fluid" style={{ maxWidth: '200px', borderRadius: ' 8px 0 0 8px ' }} />
                             </div>
                             <div className="col">
-                                <h1 className="card-title">{movie.title}</h1>
+                                <h1 className="card-title text-danger fw-bold mb-2">{movie.title}</h1>
                                 <div>
                                     <strong>Regista: </strong>{movie.director}
                                 </div>
                                 <p>
                                     <strong>Genere: </strong>{movie.genre}
                                 </p>
-                                <strong>Voto: </strong> <StarsVote vote={movie.avg_vote} />
+                                <strong>Trama: </strong>
                                 <p className="card-text">{movie.abstract}</p>
+                                <strong>Valutazione: </strong> <StarsVote vote={movie.avg_vote} />
                             </div>
                         </div>
                     </div>

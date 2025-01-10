@@ -9,8 +9,11 @@ export default function ReviewCard({ review }) {
             <div className='card p-4 fs-6 mb-4 custom-card'>
                 <strong>Voto: </strong>
                 <StarsVote vote={vote} />
+                <strong>Recensione: </strong>
                 <p>{text}</p>
-                Scritta da: {name}
+                <p>
+                    <strong>Scritta da: </strong> {name}
+                </p>
             </div>
         </div>
     )

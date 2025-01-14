@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import StarsVote from '../../components/StarsVote';
 import ReviewCard from '../../components/ReviewCard';
 import Form from '../../components/Form';
+import GlobalContext from '../../contexts/GlobalContext';
 
 
 
@@ -13,13 +14,21 @@ export default function Movies() {
 
     const { id } = useParams()
 
+    const { setIsLoading } = useContext(GlobalContext)
+
     function fetchMovie() {
+
+        setIsLoading(true)
+
         axios.get(`http://localhost:3000/api/movies/${id}`)
             .then(response => {
                 setMovie(response.data)
             })
             .catch(err => {
                 console.error(err)
+            })
+            .finally(() => {
+                setIsLoading(false)
             })
     }
 

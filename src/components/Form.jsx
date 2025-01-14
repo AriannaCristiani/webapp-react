@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import axios from 'axios'
+import GlobalContext from '../contexts/GlobalContext'
 
 
 const initialFormData = {
@@ -13,7 +14,11 @@ const initialFormData = {
 export default function Form({ id, onSuccess = () => { } }) {
 
     const [formData, setFormData] = useState(initialFormData)
+
     const [isFormValid, setIsFormValid] = useState(true)
+
+    const { setIsLoading } = useContext(GlobalContext)
+
 
     function onFormChange(event) {
         const { value, name: propName } = event.target
@@ -38,6 +43,7 @@ export default function Form({ id, onSuccess = () => { } }) {
             vote: formData.vote
         }
 
+        setIsLoading(true)
 
         axios.post(`http://localhost:3000/api/movies/${id}/reviews`, data)
             .then(res => {
@@ -48,6 +54,8 @@ export default function Form({ id, onSuccess = () => { } }) {
                 console.log(err)
                 setIsFormValid(false)
             })
+
+        setIsLoading(false)
     }
 
 

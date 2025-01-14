@@ -1,12 +1,18 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import MovieCard from '../components/MovieCard';
 import axios from 'axios';
+import GlobalContext from '../contexts/GlobalContext';
 
 export default function Home() {
 
     const [movies, setMovies] = useState([])
 
+    const { setIsLoading } = useContext(GlobalContext)
+
+
     function fetchMovies() {
+
+        setIsLoading(true)
 
         axios.get('http://localhost:3000/api/movies')
             .then(response => {
@@ -15,6 +21,9 @@ export default function Home() {
             })
             .catch(err => {
                 console.error(err)
+            })
+            .finally(() => {
+                setIsLoading(false)
             })
     }
 

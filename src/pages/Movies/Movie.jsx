@@ -67,7 +67,7 @@ export default function Movies() {
                         </div> :
                         <div>Attualmente non ci sono recensioni</div>
                     }
-                    <Form id={id} onSuccess={fetchMovie} />
+                    <Form id={id} onSuccess={fetchMovie} key={movie.reviews.length} />
                 </div>
             </section>
         </> :

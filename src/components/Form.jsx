@@ -42,8 +42,8 @@ export default function Form({ id, onSuccess = () => { } }) {
         axios.post(`http://localhost:3000/api/movies/${id}/reviews`, data)
             .then(res => {
                 console.log(res)
-                onSuccess()
                 setFormData(initialFormData)
+                onSuccess()
             }).catch(err => {
                 console.log(err)
                 setIsFormValid(false)

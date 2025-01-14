@@ -34,3 +34,17 @@ nav .active {
   background-color: rgba(192, 80, 80, 0.637);
   border-radius: 10px;
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-image {
+  animation: spin 2s linear infinite;
+}

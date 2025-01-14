@@ -33,14 +33,14 @@ export default function Home() {
     }, [])
 
     return (
-        <section className="container">
+        <section className="container neon mt-4 mb-4 card">
             <div>
-                <h1 className='text-center p-4'>ELENCO DEI FILM</h1>
-                <section className="row">
+                <h1 className='text-center p-4 abril-fatface-regular text-white'>ELENCO DEI FILM</h1>
+                <section className="row d-flex justify-content-center align-items-center">
                     {
                         movies.map(movie => {
                             return (
-                                <div key={movie.id} className=" col-sm-8 col-md-6 col-lg-4 mb-4">
+                                <div key={movie.id} className="col-sm-8 col-md-6 col-lg-4 mb-4">
                                     <MovieCard movie={movie}></MovieCard>
                                 </div>
                             )

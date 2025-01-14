@@ -7,8 +7,8 @@ function StarsVote({ vote = 0, }) {
     return <div className='d-flex mb-2' style={{ maxWidth: '90px' }}>
         {[1, 2, 3, 4, 5].map((n) => {
             return n <= vote ?
-                <StarSolid className='text-danger' key={n} /> :
-                <StarIcon className='text-danger' key={n} />
+                <StarSolid className='neon-color' key={n} /> :
+                <StarIcon className='neon-color' key={n} />
         })}
     </div>
 }

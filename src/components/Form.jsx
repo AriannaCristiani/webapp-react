@@ -70,7 +70,7 @@ export default function Form({ id, onSuccess = () => { } }) {
         <section className='container form-container mb-4'>
             <div className="container">
                 <div>
-                    <h2 className='text-center py-4'>Aggiungi una recensione</h2>
+                    <h2 className='text-center py-4 abril-fatface-regular fs-1 text-white'>Aggiungi una recensione</h2>
                 </div>
                 <div className='p-4'>
                     <form onSubmit={storeReview} className='d-flex flex-column gap-3 text-center align-items-center'>
@@ -93,7 +93,7 @@ export default function Form({ id, onSuccess = () => { } }) {
                             </select>
                         </p>
                         {isFormValid === false && <div className='fs-1'>Attenzione! I dati inseriti non sono validi</div>}
-                        <button className='btn btn-dark'>Invia</button>
+                        <button className='btn btn-light'>Invia</button>
                     </form>
                 </div>
             </div>

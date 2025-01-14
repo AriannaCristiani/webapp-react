@@ -1,8 +1,8 @@
 export default function About() {
     return (
-        <section className="container py-4 ">
+        <section className="container py-4 text-white neon mt-4 card">
             <div>
-                <h1>Chi siamo</h1>
+                <h1 className="abril-fatface-regular">Chi siamo</h1>
             </div>
             <div>
                 <p>

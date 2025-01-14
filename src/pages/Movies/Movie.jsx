@@ -49,7 +49,7 @@ export default function Movies() {
                                 <img src={movie.image} alt={movie.title} className="img-fluid" style={{ maxWidth: '200px', borderRadius: ' 8px 0 0 8px ' }} />
                             </div>
                             <div className="col">
-                                <h1 className="card-title text-danger fw-bold mb-2">{movie.title}</h1>
+                                <h1 className="card-title mb-2 abril-fatface-regular neon-color">{movie.title}</h1>
                                 <div>
                                     <strong>Regista: </strong>{movie.director}
                                 </div>
@@ -67,7 +67,7 @@ export default function Movies() {
             <section className='container'>
                 <div>
                     <div>
-                        <h2 className='text-center fs-1 py-4'>Tutte le recensioni</h2>
+                        <h2 className='text-center fs-1 py-4 abril-fatface-regular mt-4 text-white'>Tutte le recensioni</h2>
                     </div>
 
                     {movie.reviews.length ?

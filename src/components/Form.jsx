@@ -38,9 +38,15 @@ export default function Form({ id, onSuccess = () => { } }) {
         console.log('salvata la recensione sul server')
 
         const data = {
-            text: formData.text,
-            name: formData.name,
+            text: formData.text.trim() || undefined,
+            name: formData.name.trim(),
             vote: formData.vote
+        }
+
+        if (!data.name || !data.vote) {
+            console.log('Il form non è stato correttamente compilato')
+            setIsFormValid(false)
+            return
         }
 
         setIsLoading(true)
@@ -86,6 +92,7 @@ export default function Form({ id, onSuccess = () => { } }) {
                                 <option value="5">5</option>
                             </select>
                         </p>
+                        {isFormValid === false && <div className='fs-1'>Attenzione! I dati inseriti non sono validi</div>}
                         <button className='btn btn-dark'>Invia</button>
                     </form>
                 </div>

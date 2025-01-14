@@ -36,6 +36,8 @@ export default function Movies() {
         fetchMovie()
     }, [id])
 
+
+
     return (
 
         movie ? <>

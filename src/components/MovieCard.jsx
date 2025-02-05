@@ -7,7 +7,7 @@ export default function movieCard({ movie }) {
 
   return (
     <Link to={`/movie/${id}`} >
-      <div className="custom-card">
+      <div className="custom-card" title="view details" >
         <img src={image} className="card-img" alt={title} />
         <div className="card-overlay">
           <div className="card-body">

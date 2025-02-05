@@ -6,7 +6,7 @@ export default function NavBar() {
         <nav className="d-flex justify-content-between align-items-center ">
             <div >
                 <Link to="/">
-                    <img className="logo" src="../public/logo.jpg" alt="logo" />
+                    <img className="logo" src="../public/logo.jpg" alt="logo" title="back to Home" />
                 </Link>
             </div>
             <div>

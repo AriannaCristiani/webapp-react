@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <section className="container py-4 text-white neon mt-4 card">
+        <section className="container py-4 text-white  mt-4 ">
             <div>
                 <h1 className="abril-fatface-regular">Chi siamo</h1>
             </div>

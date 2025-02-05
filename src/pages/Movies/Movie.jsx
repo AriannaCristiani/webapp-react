@@ -42,7 +42,7 @@ export default function Movies() {
 
         movie ? <>
             <section className="container mt-4">
-                <div className="custom-card" style={{ borderRadius: '10px', backgroundColor: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
+                <div style={{ borderRadius: '10px', backgroundColor: 'white', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }}>
                     <div className="card-body">
                         <div className="row align-items-center">
                             <div className="col-auto">

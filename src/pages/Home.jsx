@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from 'react';
-import MovieCard from '../components/MovieCard';
 import axios from 'axios';
 import GlobalContext from '../contexts/GlobalContext';
+import MovieCard from '../components/MovieCard';
 
 export default function Home() {
 
@@ -36,7 +36,7 @@ export default function Home() {
         <section className="container neon mt-4 mb-4 card">
             <div>
                 <h1 className='text-center p-4 abril-fatface-regular text-white'>ELENCO DEI FILM</h1>
-                <section className="row d-flex justify-content-center align-items-center">
+                <section className="row p-4 ms-4">
                     {
                         movies.map(movie => {
                             return (

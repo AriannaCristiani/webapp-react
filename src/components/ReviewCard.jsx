@@ -6,7 +6,7 @@ export default function ReviewCard({ review }) {
 
     return (
         <div>
-            <div className='card p-4 fs-6 mb-4 custom-card'>
+            <div className='card p-4 fs-6 mb-4'>
                 <strong>Voto: </strong>
                 <StarsVote vote={vote} />
                 <strong>Recensione: </strong>

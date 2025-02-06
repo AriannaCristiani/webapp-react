@@ -12,13 +12,13 @@ export default function NavBar() {
             <div>
                 <ul className='d-flex justify-content-between gap-4 fs-4'>
                     <li>
-                        <NavLink to='/' className='text-white abril-fatface-regular'>HOME PAGE</NavLink>
+                        <NavLink to='/' className='text-white abril-fatface-regular'>FILM</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/about' className='text-white abril-fatface-regular' >ABOUT US</NavLink>
+                        <NavLink to='/about' className='text-white abril-fatface-regular' >CHI SIAMO</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/contacts' className='text-white abril-fatface-regular' >CONTACTS</NavLink>
+                        <NavLink to='/contacts' className='text-white abril-fatface-regular' >CONTATTI</NavLink>
                     </li>
                 </ul>
             </div>

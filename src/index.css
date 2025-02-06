@@ -6,7 +6,7 @@
 
 body {
   background-image: url(../public/pellicola.avif);
-  background-size: cover;
+
 }
 
 ul {
@@ -15,6 +15,11 @@ ul {
 
 a {
   text-decoration: none;
+  color: unset;
+}
+
+a:hover {
+  color: rgb(43, 91, 105);
 }
 
 .neon {

@@ -33,21 +33,27 @@ export default function Home() {
     }, [])
 
     return (
-        <section className="container neon mt-4 mb-4 card">
-            <div>
-                <h1 className='text-center p-4 abril-fatface-regular text-white'>ELENCO DEI FILM</h1>
-                <section className="row p-4 ms-4">
-                    {
-                        movies.map(movie => {
-                            return (
-                                <div key={movie.id} className="col-sm-8 col-md-6 col-lg-4 mb-4">
-                                    <MovieCard movie={movie}></MovieCard>
-                                </div>
-                            )
-                        })
-                    }
-                </section>
+        <>
+            <div className='text-white text-center'>
+                <h1 className=' p-4 abril-fatface-regular '>ELENCO DEI FILM</h1>
+                <hr />
             </div>
-        </section>
+            <section className="container neon mt-4 mb-4 card">
+                <div>
+
+                    <section className="row p-4 ms-4">
+                        {
+                            movies.map(movie => {
+                                return (
+                                    <div key={movie.id} className="col-sm-8 col-md-6 col-lg-4 mb-4">
+                                        <MovieCard movie={movie}></MovieCard>
+                                    </div>
+                                )
+                            })
+                        }
+                    </section>
+                </div>
+            </section>
+        </>
     )
 }

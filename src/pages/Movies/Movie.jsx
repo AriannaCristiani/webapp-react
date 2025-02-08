@@ -65,24 +65,22 @@ export default function Movies() {
                 </div>
             </section>
             <section className='container'>
-                <div>
-                    <div>
-                        <h2 className='text-center fs-1 py-4 abril-fatface-regular mt-4 text-white'>Tutte le recensioni</h2>
-                    </div>
-
-                    {movie.reviews.length ?
+                {movie.reviews.length ? (
+                    <>
+                        <div><h2 className='text-center fs-1 py-4 abril-fatface-regular mt-4 text-white'>Tutte le recensioni</h2></div>
                         <div>
                             {movie.reviews.map(review => (
                                 <ReviewCard review={review} key={review.id} />
                             ))}
-                        </div> :
-                        <div>Attualmente non ci sono recensioni</div>
-                    }
-                    <Form id={id} onSuccess={fetchMovie} key={movie.reviews.length} />
-                </div>
+                        </div>
+                    </>
+                ) : (
+                    <div className=' fs-3 py-4 abril-fatface-regular mt-4 text-white'>Attualmente non ci sono recensioni</div>
+                )}
+                <Form id={id} onSuccess={fetchMovie} key={movie.reviews.length} />
             </section>
         </> :
-            <div>Loading...</div>
+            <div className='container fs-5 text-center text-white mt-4'>Non è stato possibile raggiungere le informazioni del film</div>
 
     )
 }

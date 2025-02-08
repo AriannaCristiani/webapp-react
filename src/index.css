@@ -33,13 +33,18 @@ a:hover {
 nav .active {
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
   font-size: 30px;
-  line-height: normal;
+  line-height: 1.5rem;
 }
 
 footer .active {
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
   font-size: 20px;
   line-height: normal;
+}
+
+.border-light-blue {
+  border: 1px solid rgb(126, 154, 163);
+  border-radius: 5px;
 }
 
 

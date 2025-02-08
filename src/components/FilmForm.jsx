@@ -57,7 +57,6 @@ export default function FilmForm({ onSuccess = () => { } }) {
         formDataToSend.append('abstract', formData.abstract);
         formDataToSend.append('image', formData.image);
 
-
         for (let pair of formDataToSend.entries()) {
             console.log(pair[0] + ':', pair[1]);
         }

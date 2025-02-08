@@ -76,15 +76,15 @@ export default function Form({ id, onSuccess = () => { } }) {
                     <form onSubmit={storeReview} className='d-flex flex-column gap-3 text-center align-items-center'>
                         <p className='form-control'>
                             <label htmlFor="name"><strong>Nome</strong></label>
-                            <input className="input-group" type="text" placeholder='Inserisci il tuo nome' name='name' id='name' onChange={onFormChange} />
+                            <input className="input-group border-light-blue rounded" type="text" placeholder='Inserisci il tuo nome' name='name' id='name' onChange={onFormChange} />
                         </p>
                         <p className='form-control'>
                             <label htmlFor="text"><strong>Recensione</strong></label>
-                            <textarea className="input-group" rows="6" name="text" id="text" placeholder='Scrivi la tua recensione' onChange={onFormChange} ></textarea>
+                            <textarea className="input-group border-light-blue rounded" rows="6" name="text" id="text" placeholder='Scrivi la tua recensione' onChange={onFormChange} ></textarea>
                         </p>
                         <p className='form-control text-center d-flex align-items-center flex-column'>
                             <label htmlFor="vote"><strong>Voto</strong></label>
-                            <select className="input-group w-25 text-center" name="vote" id="vote" onChange={onFormChange} >
+                            <select className="input-group w-25 text-center border-light-blue rounded" name="vote" id="vote" onChange={onFormChange} >
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>

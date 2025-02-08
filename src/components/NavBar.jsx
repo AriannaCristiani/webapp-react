@@ -15,10 +15,10 @@ export default function NavBar() {
                         <NavLink to='/' className='text-white abril-fatface-regular'>FILM</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/about' className='text-white abril-fatface-regular' >CHI SIAMO</NavLink>
+                        <NavLink to='/form' className='text-white abril-fatface-regular' >SCOPRI DI PIU'</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/form' className='text-white abril-fatface-regular' >MORE</NavLink>
+                        <NavLink to='/about' className='text-white abril-fatface-regular' >CHI SIAMO</NavLink>
                     </li>
                 </ul>
             </div>

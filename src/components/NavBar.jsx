@@ -18,7 +18,7 @@ export default function NavBar() {
                         <NavLink to='/about' className='text-white abril-fatface-regular' >CHI SIAMO</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/contacts' className='text-white abril-fatface-regular' >CONTATTI</NavLink>
+                        <NavLink to='/form' className='text-white abril-fatface-regular' >MORE</NavLink>
                     </li>
                 </ul>
             </div>

@@ -20,6 +20,7 @@ a {
 
 a:hover {
   color: rgb(43, 91, 105);
+  font-weight: bold;
 }
 
 .neon {
@@ -32,13 +33,13 @@ a:hover {
 
 nav .active {
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
-  font-size: 30px;
+  font-size: 1.5rem;
   line-height: 1.5rem;
 }
 
 footer .active {
   text-shadow: 2px 2px 2px rgb(0, 0, 0);
-  font-size: 20px;
+  font-size: 1.2rem;
   line-height: normal;
 }
 
@@ -113,6 +114,8 @@ footer .active {
 
 .logo:hover {
   transform: scale(1.05);
+  transition: transform 0.3s ease;
+  opacity: 0.8;
   cursor: pointer;
 }
 

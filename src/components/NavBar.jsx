@@ -10,7 +10,7 @@ export default function NavBar() {
                 </Link>
             </div>
             <div>
-                <ul className='d-flex justify-content-between gap-4 fs-4'>
+                <ul className='d-flex justify-content-between gap-4 fs-5'>
                     <li>
                         <NavLink to='/' className='text-white abril-fatface-regular'>FILM</NavLink>
                     </li>

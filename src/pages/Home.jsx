@@ -36,7 +36,7 @@ export default function Home() {
     return (
         <>
             <div className="text-white text-center position-relative">
-                <h1 className="p-4 abril-fatface-regular">ELENCO DEI FILM</h1>
+                <h1 className="p-4 abril-fatface-regular">MOVIES LIST</h1>
 
                 <div className="position-absolute top-50 end-0 translate-middle-y me-4 d-flex align-items-center">
                     {showSearch && (

@@ -12,8 +12,8 @@ export default function movieCard({ movie }) {
         <div className="card-overlay">
           <div className="card-body">
             <h5 className="card-title fs-4 mb-4">{title}</h5>
-            <p className="card-text"><strong>Un film di:</strong> {director}</p>
-            <p className="card-text"><strong>Genere:</strong> {genre}</p>
+            <p className="card-text"><strong>A movie by:</strong> {director}</p>
+            <p className="card-text"><strong>Gender:</strong> {genre}</p>
             <p className="card-text">{abstract}</p>
           </div>
         </div>

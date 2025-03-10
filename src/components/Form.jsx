@@ -70,20 +70,20 @@ export default function Form({ id, onSuccess = () => { } }) {
         <section className='container form-container mb-4'>
             <div className="container">
                 <div>
-                    <h2 className='text-center py-4 abril-fatface-regular fs-1 text-white'>Aggiungi una recensione</h2>
+                    <h2 className='text-center py-4 abril-fatface-regular fs-1 text-white'>Add your review</h2>
                 </div>
                 <div className='p-4'>
                     <form onSubmit={storeReview} className='d-flex flex-column gap-3 text-center align-items-center'>
                         <p className='form-control'>
-                            <label htmlFor="name"><strong>Nome</strong></label>
+                            <label htmlFor="name"><strong>Name</strong></label>
                             <input className="input-group border-light-blue rounded" type="text" placeholder='Inserisci il tuo nome' name='name' id='name' onChange={onFormChange} />
                         </p>
                         <p className='form-control'>
-                            <label htmlFor="text"><strong>Recensione</strong></label>
+                            <label htmlFor="text"><strong>Review</strong></label>
                             <textarea className="input-group border-light-blue rounded" rows="6" name="text" id="text" placeholder='Scrivi la tua recensione' onChange={onFormChange} ></textarea>
                         </p>
                         <p className='form-control text-center d-flex align-items-center flex-column'>
-                            <label htmlFor="vote"><strong>Voto</strong></label>
+                            <label htmlFor="vote"><strong>Vote</strong></label>
                             <select className="input-group w-25 text-center border-light-blue rounded" name="vote" id="vote" onChange={onFormChange} >
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -92,8 +92,8 @@ export default function Form({ id, onSuccess = () => { } }) {
                                 <option value="5">5</option>
                             </select>
                         </p>
-                        {isFormValid === false && <div className='fs-1'>Attenzione! I dati inseriti non sono validi</div>}
-                        <button className='btn btn-light'>Invia</button>
+                        {isFormValid === false && <div className='fs-1'>Warning. The data entered is invalid</div>}
+                        <button className='form-btn abril-fatface-regular'>Send</button>
                     </form>
                 </div>
             </div>

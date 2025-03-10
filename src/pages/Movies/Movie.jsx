@@ -51,14 +51,14 @@ export default function Movies() {
                             <div className="col">
                                 <h1 className="card-title mb-2 abril-fatface-regular neon-color">{movie.title}</h1>
                                 <div>
-                                    <strong>Regista: </strong>{movie.director}
+                                    <strong>Director: </strong>{movie.director}
                                 </div>
                                 <p>
-                                    <strong>Genere: </strong>{movie.genre}
+                                    <strong>Gender: </strong>{movie.genre}
                                 </p>
-                                <strong>Trama: </strong>
+                                <strong>Plot: </strong>
                                 <p className="card-text">{movie.abstract}</p>
-                                <strong>Valutazione: </strong> <StarsVote vote={movie.avg_vote} />
+                                <strong>Vote: </strong> <StarsVote vote={movie.avg_vote} />
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ export default function Movies() {
             <section className='container'>
                 {movie.reviews.length ? (
                     <>
-                        <div><h2 className='text-center fs-1 py-4 abril-fatface-regular mt-4 text-white'>Tutte le recensioni</h2></div>
+                        <div><h2 className='text-center fs-1 py-4 abril-fatface-regular mt-4 text-white'>All reviews</h2></div>
                         <div>
                             {movie.reviews.map(review => (
                                 <ReviewCard review={review} key={review.id} />
@@ -75,12 +75,12 @@ export default function Movies() {
                         </div>
                     </>
                 ) : (
-                    <div className=' fs-3 py-4 abril-fatface-regular mt-4 text-white'>Attualmente non ci sono recensioni</div>
+                    <div className=' fs-3 py-4 abril-fatface-regular mt-4 text-white'>There are currently no reviews</div>
                 )}
                 <Form id={id} onSuccess={fetchMovie} key={movie.reviews.length} />
             </section>
         </> :
-            <div className='container fs-5 text-center text-white mt-4'>Non è stato possibile raggiungere le informazioni del film</div>
+            <div className='container fs-5 text-center text-white mt-4'>Information from the movie could not be reached</div>
 
     )
 }

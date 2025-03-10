@@ -5,7 +5,9 @@ export default function Header() {
         <footer className="container-full p-4 neon">
             <div>
 
-                <NavLink to='/contacts' className='text-white abril-fatface-regular' >CONTATTI</NavLink>
+                <NavLink to='/contacts' className='text-white abril-fatface-regular m-2' >CONTACTS</NavLink>
+
+                <NavLink to='/about' className='text-white abril-fatface-regular m-2' >ABOUT</NavLink>
 
             </div>
         </footer>
